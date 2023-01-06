@@ -1,0 +1,35 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/forbid-prop-types":[0],
+        "react/jsx-props-no-spreading": [0],
+        "react/jsx-no-useless-fragment":[0],
+        "react/no-unstable-nested-components": [0],
+        "react/require-default-props": [0],
+        "react/jsx-no-bind": [0],
+        "consistent-return": "off",
+        "no-nested-ternary": "off",
+        "import/prefer-default-export": "off",
+        "max-len":["error", 250],
+        "no-alert": "off"
+        
+    }
+}

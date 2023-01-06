@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color: #181818;
+  --background-color: #eee;
+  --bordrer-color: #181818;
+  --button-color: #eee;
+  --button-background-color: #181818;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.3s ease-in;
+}
+
+html[data-theme='dark'] {
+  --color: #eee;
+  --background-color: #181818;
+  --bordrer-color: #eee;
+  --button-color: #181818;
+  --button-background-color: #eee; 
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
+article[id="note-item"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+div[id="app-container"] > header,
+a[href="/notes/new"] > svg,
+button[type="button"] > svg,
+button[id="button-logout"]
+{
+  border-color: var(--bordrer-color);
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[id="add-new-page__input__title"],
+div[id="add-new-page__input__body"] 
+{
+  background-color: var(--background-color);
+}
+
+div[id="add-new-page__input__title"], div[id="add-new-page__input__body"] {
+  color: var(--color);
+}
+
+div[id="input-login"] > button, div[id="input-register"] > button {
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+}
+
+p[id="note-item__body"] {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+[contentEditable="true"]:empty:before {
+  content: attr(data-placeholder);
+  opacity: 0.6;
+}
